@@ -1,15 +1,15 @@
 class GrurlController {
 
     def index = {
-        if (params.urlHash) {
-            def u = GRUrl.get(Long.parseLong(params.urlHash, Character.MAX_RADIX))
-            if (u) {
-                redirect url: u.realUrl
-            } else {
-                flash.message = "No matching record was found"
-            }
+    }
+
+    def redirectRequest = {
+        def u = GRUrl.get(Long.parseLong(params.urlHash, Character.MAX_RADIX))
+        if (u) {
+            redirect url: u.realUrl
         } else {
-            return [urlInstance: flash.urlInstance]
+            flash.message = "No matching record was found"
+            render view: 'index'
         }
     }
 
@@ -21,9 +21,6 @@ class GrurlController {
                 flash.message = "An error occurred processing URL: ${params.realUrl}"
             }
         }
-        if (!urlInstance.hasErrors()) {
-            flash.urlInstance = urlInstance
-        }
-        redirect action: index
+        render view: 'index', model: [urlInstance: urlInstance.hasErrors() ? null : urlInstance]
     }
 }

@@ -12,8 +12,8 @@
     </g:if>
 
     <g:if test="${urlInstance}">
-        <g:link action="index" controller="grurl" params="[urlHash: Long.toString(urlInstance.id, Character.MAX_RADIX)]" absolute="true">
-            ${createLink(action: 'index', controller: 'grurl', params: [urlHash: Long.toString(urlInstance.id, Character.MAX_RADIX)], absolute: true)}
+        <g:link action="redirectRequest" controller="grurl" params="[urlHash: Long.toString(urlInstance.id, Character.MAX_RADIX)]" absolute="true">
+            ${createLink(action: 'redirectRequest', controller: 'grurl', params: [urlHash: Long.toString(urlInstance.id, Character.MAX_RADIX)], absolute: true)}
         </g:link>
     </g:if>
     <g:form action="generate" method="post">
