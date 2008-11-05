@@ -1,0 +1,37 @@
+.body {
+    margin-left: 280px;
+    /*position: relative;*/
+    z-index: 3;
+}
+
+.navigation {
+    position: absolute;
+  border: 1px solid #369;
+  margin: 20px 0px 20px 20px;
+  padding:5px;
+  z-index:1;
+  width:230px;
+}
+
+.navigation h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 3px;
+}
+
+.footer {
+    position: absolute;
+    font-size: 80%;
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  bottom:20px;
+  left:20px;
+  background-color:#fff;
+  padding:5px;
+  z-index:1;
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  margin:0px 250px 20px 50px;
+  color: grey;
+}

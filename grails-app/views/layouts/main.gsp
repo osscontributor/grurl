@@ -2,6 +2,7 @@
 <head>
     <title><g:layoutTitle default="Grails"/></title>
     <link rel="stylesheet" href="${createLinkTo(dir: 'css', file: 'main.css')}"/>
+    <link rel="stylesheet" href="${createLinkTo(dir: 'css', file: 'grurl.css')}"/>
     <link rel="shortcut icon" href="${createLinkTo(dir: 'images', file: 'favicon.ico')}" type="image/x-icon"/>
     <g:layoutHead/>
     <g:javascript library="application"/>
@@ -12,5 +13,7 @@
 </div>
 <div class="logo"><img src="${createLinkTo(dir: 'images', file: 'grails_logo.jpg')}" alt="Grails"/></div>
 <g:layoutBody/>
+<g:render template="/templates/navigation"/>
+<g:render template="/templates/footer"/>
 </body>
 </html>

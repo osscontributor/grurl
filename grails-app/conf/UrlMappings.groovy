@@ -1,6 +1,6 @@
 class UrlMappings {
     static mappings = {
-        "/grurl/generate" (controller: 'grurl', action: 'generate')
+        "/$controller/$action"{}
         "/$urlHash"(controller: 'grurl', action:'redirectRequest')
         "/"(controller: 'grurl', action: 'index')
         "500"(view:'/error')

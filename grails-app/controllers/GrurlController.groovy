@@ -23,4 +23,6 @@ class GrurlController {
         }
         render view: 'index', model: [urlInstance: urlInstance.hasErrors() ? null : urlInstance]
     }
+
+    def questions = {}
 }
