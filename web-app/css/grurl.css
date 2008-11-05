@@ -35,6 +35,13 @@
     color: grey;
 }
 
+.inputArea {
+    background-color: #eee;
+    padding: 25px;
+    border: 2px solid #dce;
+    margin: 25px 25px 5px 10px;
+}
+
 .qa {
     background-color: #eee;
     border: 2px solid #dce;

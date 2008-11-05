@@ -1,6 +1,7 @@
 class GrurlController {
 
     def index = {
+        [urlInstance: flash.urlInstance]
     }
 
     def redirectRequest = {
@@ -21,7 +22,8 @@ class GrurlController {
                 flash.message = "An error occurred processing URL: ${params.realUrl}"
             }
         }
-        render view: 'index', model: [urlInstance: urlInstance.hasErrors() ? null : urlInstance]
+        flash.urlInstance = urlInstance
+        redirect action: index
     }
 
     def questions = {}

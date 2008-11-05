@@ -11,18 +11,18 @@
         <div class="errors">${flash.message}</div>
     </g:if>
 
-    <g:if test="${urlInstance}">
+    <g:if test="${urlInstance?.id}">
         <g:link action="redirectRequest" controller="grurl" params="[urlHash: Long.toString(urlInstance.id, Character.MAX_RADIX)]" absolute="true">
             ${createLink(action: 'redirectRequest', controller: 'grurl', params: [urlHash: Long.toString(urlInstance.id, Character.MAX_RADIX)], absolute: true)}
         </g:link>
     </g:if>
-    <g:form action="generate" method="post">
-        <div class="dialog">
+    <div class="inputArea">
+        <g:form action="generate" method="post">
             <label for="realUrl">Enter a URL to GRUrl-ify:</label>
             <input type="text" id="realUrl" name="realUrl" value=""/>
             <g:submitButton name="generate" value="Generate GRUrl"/>
-        </div>
-    </g:form>
+        </g:form>
+    </div>
 </div>
 </body>
 </html>
