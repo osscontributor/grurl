@@ -6,7 +6,4 @@ class GRUrl {
         realUrl url: true, unique: true
     }
     
-    static mapping = {
-        realUrl index: true
-    }
 }
