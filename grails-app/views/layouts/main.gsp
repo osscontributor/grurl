@@ -8,12 +8,13 @@
     <g:javascript library="application"/>
 </head>
 <body>
-<div id="spinner" class="spinner" style="display:none;">
-    <img src="${createLinkTo(dir: 'images', file: 'spinner.gif')}" alt="Spinner"/>
+<div id="container">
+    <div class="logo"><img src="${createLinkTo(dir: 'images', file: 'grails_logo.jpg')}" alt="Grails"/></div>
+    <div class="body">
+        <g:render template="/templates/navigation"/>
+        <g:layoutBody/>
+    </div>
 </div>
-<div class="logo"><img src="${createLinkTo(dir: 'images', file: 'grails_logo.jpg')}" alt="Grails"/></div>
-<g:layoutBody/>
-<g:render template="/templates/navigation"/>
 <g:render template="/templates/footer"/>
 </body>
 </html>

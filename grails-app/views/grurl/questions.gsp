@@ -5,7 +5,6 @@
     <title>GRUrl - Questions</title>
 </head>
 <body>
-<div class="body">
     <h1>Questions And Answers</h1>
 
     <div class="qa">
@@ -94,6 +93,5 @@
         </div>
     </div>
 
-</div>
 </body>
 </html>

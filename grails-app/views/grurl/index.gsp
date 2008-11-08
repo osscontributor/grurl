@@ -5,7 +5,6 @@
     <title>GRUrl</title>
 </head>
 <body>
-<div class="body">
     <h1>Welcome To GRUrl</h1>
     <g:if test="${flash.message}">
         <div class="errors">${flash.message}</div>
@@ -23,6 +22,5 @@
             <g:submitButton name="generate" value="Generate GRUrl"/>
         </g:form>
     </div>
-</div>
 </body>
 </html>

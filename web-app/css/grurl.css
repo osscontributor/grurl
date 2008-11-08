@@ -1,15 +1,31 @@
+html, body {
+    height: auto !important;
+    height: 100%; /* for IE 6 */
+    min-height: 100%;
+}
+
+#container {
+    height: auto !important;
+    height: 93%;
+    min-height: 93%;
+}
+
 .body {
-    margin: 5px 200px 5px 280px; /*position: relative;*/
-    z-index: 3;
+    margin: 0;
+    padding: 0;
+    font-size: 140%;
+    padding-left: 280px;
+    position: relative;
 }
 
 .navigation {
-    position: absolute;
+    float: left;
     border: 1px solid #369;
-    margin: 20px 0px 20px 20px;
+    margin: 0px 20px 20px 0px;
     padding: 5px;
     z-index: 1;
     width: 230px;
+    margin-left: -280px;
 }
 
 .navigation h2 {
@@ -20,19 +36,9 @@
 }
 
 .footer {
-    position: absolute;
+    clear: both;
     font-size: 80%;
-    voice-family: "\"}\"";
-    voice-family: inherit;
-    bottom: 20px;
-    left: 20px;
-    background-color: #fff;
-    padding: 5px;
-    z-index: 1;
-    voice-family: "\"}\"";
-    voice-family: inherit;
-    margin: 0px 250px 20px 50px;
-    color: grey;
+    padding: 0 5px;
 }
 
 .inputArea {
