@@ -5,7 +5,7 @@ class GrurlController {
     }
 
     def redirectRequest = {
-        def u = GRUrl.get(Long.parseLong(params.urlHash, Character.MAX_RADIX))
+        def u = GRUrl.get(params.urlHash.decodeGrurl())
         if (u) {
             redirect url: u.realUrl
         } else {

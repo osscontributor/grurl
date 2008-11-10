@@ -12,7 +12,7 @@
 
     <g:if test="${urlInstance?.id}">
         <g:link action="redirectRequest" controller="grurl" params="[urlHash: Long.toString(urlInstance.id, Character.MAX_RADIX)]" absolute="true">
-            ${createLink(action: 'redirectRequest', controller: 'grurl', params: [urlHash: Long.toString(urlInstance.id, Character.MAX_RADIX)], absolute: true)}
+            ${createLink(action: 'redirectRequest', controller: 'grurl', params: [urlHash: urlInstance.id.encodeAsGrurl()], absolute: true)}
         </g:link>
     </g:if>
     <div class="inputArea">
