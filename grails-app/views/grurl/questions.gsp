@@ -15,7 +15,7 @@
             A: GRUrl is a tool to provide a very short URL that effectively acts as an alias for another URL
             which is potentially a lot longer.  For example, a URL like
             http://www.abc.net.au/science/articles/2008/11/04/2409959.htm?site=science could
-            be accessed with a much shorter URL like http://grurl.com/3d7.
+            be accessed with a much shorter URL like http://grurl.net/3d7.
         </div>
     </div>
 
