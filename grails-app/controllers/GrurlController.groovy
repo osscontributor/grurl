@@ -7,6 +7,9 @@ class GrurlController {
     def redirectRequest = {
         def u = GRUrl.get(params.urlHash.decodeGrurl())
         if (u) {
+            u.lock()
+            u.accessCount++
+            u.save()
             redirect url: u.realUrl
         } else {
             flash.message = "No matching record was found"
