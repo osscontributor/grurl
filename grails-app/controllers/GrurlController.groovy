@@ -1,5 +1,7 @@
 class GrurlController {
 
+    def urlValidator
+    
     def index = {
         [urlInstance: flash.urlInstance]
     }
@@ -18,9 +20,13 @@ class GrurlController {
     }
 
     def generate = {
-        def urlInstance = GRUrl.findByRealUrl(params.realUrl)
+        def realUrl = params.realUrl
+        if(!urlValidator.isValid(realUrl)) {
+            realUrl = "http://${realUrl}"
+        }
+        def urlInstance = GRUrl.findByRealUrl(realUrl)
         if (!urlInstance) {
-            urlInstance = new GRUrl(params)
+            urlInstance = new GRUrl(realUrl: realUrl)
             if (!urlInstance.save()) {
                 flash.message = "An error occurred processing URL: ${params.realUrl}"
             }
