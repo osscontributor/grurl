@@ -1,3 +1,3 @@
 <div class="footer">
-&copy; 2008 Jeff Brown - All Rights Reserved
+&copy; 2008 GrailsWorld - All Rights Reserved
 </div>
