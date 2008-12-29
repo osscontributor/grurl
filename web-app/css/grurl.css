@@ -17,15 +17,20 @@ html, body {
     padding-left: 280px;
     position: relative;
 }
+.pageBody {
+    margin: 10 200 10 50;
+}
 
 .navigation {
     float: left;
-    border: 1px solid #369;
     margin: 0px 20px 20px 0px;
     padding: 5px;
     z-index: 1;
     width: 230px;
     margin-left: -260px;
+    
+    background-color: #eee;
+    border: 2px solid #dce;
 }
 
 .navigation h2 {
@@ -39,6 +44,7 @@ html, body {
     clear: both;
     font-size: 80%;
     padding: 0 5px;
+    margin: 25px;
 }
 
 .inputArea {

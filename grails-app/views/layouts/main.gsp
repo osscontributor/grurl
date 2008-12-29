@@ -12,7 +12,9 @@
     <div class="logo"><img src="${createLinkTo(dir: 'images', file: 'grurl_logo.png')}" alt="GRUrl"/></div>
     <div class="body">
         <g:render template="/templates/navigation"/>
-        <g:layoutBody/>
+		<div class="pageBody">
+        	<g:layoutBody/>
+		</div>
     </div>
 </div>
 <g:render template="/templates/footer"/>
