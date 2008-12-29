@@ -13,7 +13,7 @@
     </g:if>
 
     <g:if test="${urlInstance?.id}">
-        <div class="inputArea">
+        <div class="fancyBox">
         	<g:link action="redirectRequest" 
                  controller="grurl" 
                  params="[urlHash: urlInstance.id.encodeAsGrurl()]" 
@@ -25,7 +25,7 @@
             </g:link> is now a GRUrl which may be used as an alias for ${urlInstance.realUrl}.
 		</div>
     </g:if>
-    <div class="inputArea">
+    <div class="fancyBox">
         <g:form action="generate" method="post">
             <label for="realUrl">Enter a URL to GRUrl-ify:</label>
             <input type="text" id="realUrl" name="realUrl" value=""/>
