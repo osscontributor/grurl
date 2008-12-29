@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="container">
-    <div class="logo"><img src="${createLinkTo(dir: 'images', file: 'grails_logo.jpg')}" alt="Grails"/></div>
+    <div class="logo"><img src="${createLinkTo(dir: 'images', file: 'grurl_logo.png')}" alt="GRUrl"/></div>
     <div class="body">
         <g:render template="/templates/navigation"/>
         <g:layoutBody/>
