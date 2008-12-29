@@ -5,7 +5,9 @@
     <title>GRUrl</title>
 </head>
 <body>
-    <h1>Welcome To GRUrl</h1>
+	<h3>GRUrl - Your Source For Groovy URLs</h3>
+	GRUrl will turn any ordinary URL into a Groovy URL (GRUrl).  A GRUrl is a shorter URL which may
+	be used as an alias for a potentially longer URL.  See the <g:link action='questions' controller='grurl'>questions</g:link> page for more information.
     <g:if test="${flash.message}">
         <div class="errors">${flash.message}</div>
     </g:if>
