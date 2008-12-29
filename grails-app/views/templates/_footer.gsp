@@ -1,3 +1,3 @@
 <div class="footer">
-&copy; 2008 GrailsWorld - All Rights Reserved
+<img src="${createLinkTo(dir: 'images', file:'grails-powered.gif')}"/>&nbsp;&nbsp;&copy; 2008 GrailsWorld - All Rights Reserved
 </div>
