@@ -13,9 +13,17 @@
     </g:if>
 
     <g:if test="${urlInstance?.id}">
-        <g:link action="redirectRequest" controller="grurl" params="[urlHash: urlInstance.id.encodeAsGrurl()]" absolute="true">
-            ${createLink(action: 'redirectRequest', controller: 'grurl', params: [urlHash: urlInstance.id.encodeAsGrurl()], absolute: true)}
-        </g:link>
+        <div class="inputArea">
+        	<g:link action="redirectRequest" 
+                 controller="grurl" 
+                 params="[urlHash: urlInstance.id.encodeAsGrurl()]" 
+                 absolute="true">
+              ${createLink(action: 'redirectRequest', 
+                           controller: 'grurl', 
+                           params: [urlHash: urlInstance.id.encodeAsGrurl()], 
+                           absolute: true)}
+            </g:link> is now a GRUrl which may be used as an alias for ${urlInstance.realUrl}.
+		</div>
     </g:if>
     <div class="inputArea">
         <g:form action="generate" method="post">
