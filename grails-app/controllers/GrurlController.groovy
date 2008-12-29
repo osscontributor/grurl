@@ -1,5 +1,7 @@
 class GrurlController {
 
+    static allowedMethods = [generate:'POST']
+    
     def urlValidator
     
     def index = {
