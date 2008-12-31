@@ -33,4 +33,5 @@ class GrurlController {
     def questions = {}
     def developers = {}
     def terms = {}
+    def contact = {}
 }
