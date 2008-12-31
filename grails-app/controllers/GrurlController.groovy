@@ -29,9 +29,4 @@ class GrurlController {
         }
         redirect action: index
     }
-
-    def questions = {}
-    def developers = {}
-    def terms = {}
-    def contact = {}
 }
