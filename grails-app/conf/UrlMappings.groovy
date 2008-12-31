@@ -7,6 +7,8 @@ class UrlMappings {
             }
         }
         "/"(controller: 'grurl', action: 'index')
+        "/questions"(controller: 'grurl', action: 'questions')
+        "/developers"(controller: 'grurl', action: 'developers')
         "500"(view:'/error')
     }
 }

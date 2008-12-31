@@ -1,6 +1,7 @@
 class GrurlController {
 
     def grurlService 
+    static allowedMethods = [generate:'POST']
     
     def urlValidator
     
@@ -33,4 +34,5 @@ class GrurlController {
     }
 
     def questions = {}
+    def developers = {}
 }

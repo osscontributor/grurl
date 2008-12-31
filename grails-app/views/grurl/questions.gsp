@@ -7,7 +7,7 @@
 <body>
     <h1>Questions And Answers</h1>
 
-    <div class="qa">
+    <div class="fancyBox">
         <div class="question">
             Q: What does GRUrl do?
         </div>
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div class="qa">
+    <div class="fancyBox">
         <div class="question">
             Q: Why would I want to do that?
         </div>
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="qa">
+    <div class="fancyBox">
         <div class="question">
             Q: I want to visit sites that I shouldn't be visiting and I don't want those URLs to show up
             in my browser history.  If I access those sites through GRUrl, will that help me hide my tracks?
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <div class="qa">
+    <div class="fancyBox">
         <div class="question">
             Q: Does GRUrl keep track of what sites I visit or any of my personal information?
         </div>
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="qa">
+    <div class="fancyBox">
         <div class="question">
             Q: Do I need any special software installed on my computer to use GRUrl?
         </div>
@@ -66,7 +66,7 @@
         </div>
     </div>
 
-    <div class="qa">
+    <div class="fancyBox">
         <div class="question">
             Q: How much does it cost?
         </div>
@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <div class="qa">
+    <div class="fancyBox">
         <div class="question">
             Q: Do I need to sign up or create an account to use GRUrl?
         </div>
@@ -84,7 +84,7 @@
         </div>
     </div>
 
-    <div class="qa">
+    <div class="fancyBox">
         <div class="question">
             Q: Why is it called GRUrl?
         </div>
