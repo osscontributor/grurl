@@ -4,13 +4,8 @@ class RestController {
     
     def grurlService
     
-    def generate = {
-        def urlRequest
-        if (params) {
-            urlRequest = params.rawUrl
-        } else {
-            urlRequest = XML.parse(request)
-        }
+    def xmlGenerate = {
+        def urlRequest = XML.parse(request)
         
         def realUrl = grurlService.refine(urlRequest)      
         def result 
@@ -22,13 +17,20 @@ class RestController {
             }
         }
         
-        if (params) {
-            return render(result)
-        } else {
-            return render(contentType: "application/xml", encoding: "UTF-8") {
-                grurl("$result")
-            }
+        render(contentType: "application/xml", encoding: "UTF-8") {
+            grurl("${result.realUrl}")
         }
-        
+    }
+    
+    def paramGenerate = {
+        def urlRequest = params.rawUrl
+        def realUrl = grurlService.refine(urlRequest)      
+        def result 
+        try {
+            result = grurlService.resolve(realUrl)
+        } catch (GrurlException ex) {
+            return render("${ex.message}")
+        }
+        return render(result.realUrl)
     }
 }

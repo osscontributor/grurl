@@ -19,7 +19,7 @@ class RestControllerTests extends ControllerUnitTestCase {
         
         def controller = new RestController()
         controller.grurlService = grurlServiceControl.createMock()
-        controller.generate()
+        controller.xmlGenerate()
         
         assertEquals "<grurl>${newGrurl}</grurl>", mockResponse.contentAsString
     }
@@ -39,7 +39,7 @@ class RestControllerTests extends ControllerUnitTestCase {
         
         def controller = new RestController()
         controller.grurlService = grurlServiceControl.createMock()
-        controller.generate()
+        controller.xmlGenerate()
         
         assertEquals "<error>error message</error>", mockResponse.contentAsString
     }
@@ -60,7 +60,7 @@ class RestControllerTests extends ControllerUnitTestCase {
         def controller = new RestController()
         controller.grurlService = grurlServiceControl.createMock()
         controller.metaClass.getParams = { -> params }
-        controller.generate()
+        controller.paramGenerate()
         
         assertEquals "${newGrurl}", mockResponse.contentAsString
     }
