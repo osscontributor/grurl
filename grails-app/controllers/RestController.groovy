@@ -3,8 +3,6 @@ import grails.converters.XML
 class RestController {
     
     def grurlService
-
-    def index = { }
     
     def generate = {
         def xmlResult = XML.parse(request)
