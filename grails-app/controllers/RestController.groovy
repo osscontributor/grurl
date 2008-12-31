@@ -5,9 +5,14 @@ class RestController {
     def grurlService
     
     def generate = {
-        def xmlResult = XML.parse(request)
+        def urlRequest
+        if (params) {
+            urlRequest = params.rawUrl
+        } else {
+            urlRequest = XML.parse(request)
+        }
         
-        def realUrl = grurlService.refine(xmlResult)      
+        def realUrl = grurlService.refine(urlRequest)      
         def result 
         try {
             result = grurlService.resolve(realUrl)
@@ -17,8 +22,13 @@ class RestController {
             }
         }
         
-        render(contentType: "application/xml", encoding: "UTF-8") {
-            grurl("$result")
+        if (params) {
+            return render(result)
+        } else {
+            return render(contentType: "application/xml", encoding: "UTF-8") {
+                grurl("$result")
+            }
         }
+        
     }
 }
