@@ -1,0 +1,4 @@
+class RestController {
+
+    def index = { }
+}
