@@ -1,5 +1,7 @@
 class GrurlController {
 
+    def grurlService 
+    
     def urlValidator
     
     def index = {
@@ -20,18 +22,13 @@ class GrurlController {
     }
 
     def generate = {
-        def realUrl = params.realUrl
-        if(!urlValidator.isValid(realUrl)) {
-            realUrl = "http://${realUrl}"
+        def realUrl = grurlService.refine(params.realUrl)        
+        try {
+            flash.urlInstance = grurlService.resolve(realUrl)
+        } catch (Throwable ex) {
+            println ex.message
+            flash.message = ex.message
         }
-        def urlInstance = GRUrl.findByRealUrl(realUrl)
-        if (!urlInstance) {
-            urlInstance = new GRUrl(realUrl: realUrl)
-            if (!urlInstance.save()) {
-                flash.message = "An error occurred processing URL: ${params.realUrl}"
-            }
-        }
-        flash.urlInstance = urlInstance
         redirect action: index
     }
 
