@@ -8,7 +8,7 @@
     <h3>Information For Developers</h3>
     <p>Would you like to know how you can request GRUrl to process URLs for you from your application?  Read on...</p>
     <h4>GET Request</h4>
-    <p>Add you need to do is pass one parameter along with your GET request to <span class='code'>http://grurl.com/generate</span>...</p>
+    <p>All you need to do is pass one parameter along with your GET request to <span class='code'>http://grurl.com/generate</span>...</p>
     <div class='code'>
         http://grurl.com/generate?rawUrl=example.com/2008/12/31/its-new-years-eve
     </div>
