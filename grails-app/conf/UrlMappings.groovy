@@ -9,6 +9,7 @@ class UrlMappings {
         "/"(controller: 'grurl', action: 'index')
         "/questions"(controller: 'grurl', action: 'questions')
         "/developers"(controller: 'grurl', action: 'developers')
+        "/terms"(controller: 'grurl', action: 'terms')
         "500"(view:'/error')
         "/generate" {
             controller = 'rest'
