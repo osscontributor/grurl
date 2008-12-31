@@ -3,7 +3,7 @@ import grails.test.ControllerUnitTestCase
 class RestControllerTests extends ControllerUnitTestCase {
 
     void testXML_OneRawUrlSuccess() {
-        def newGrurl = 'http://grurl.com/WORD'
+        def newGrurl = [realUrl:'http://grurl.com/WORD']
         
         def grurlServiceControl = mockFor(GrurlService)
         grurlServiceControl.demand.refine { url ->
@@ -21,7 +21,7 @@ class RestControllerTests extends ControllerUnitTestCase {
         controller.grurlService = grurlServiceControl.createMock()
         controller.xmlGenerate()
         
-        assertEquals "<grurl>${newGrurl}</grurl>", mockResponse.contentAsString
+        assertEquals "<grurl>http://grurl.com/WORD</grurl>", mockResponse.contentAsString
     }
     
     void testXML_OneRawUrlFailure_ReturnsErrorMessage() {
@@ -45,7 +45,7 @@ class RestControllerTests extends ControllerUnitTestCase {
     }
     
     void testGETParams_OneEncodedUrl() {
-        def newGrurl = 'http://grurl.com/WORD'
+        def newGrurl = [realUrl:'http://grurl.com/WORD']
         
         def grurlServiceControl = mockFor(GrurlService)
         grurlServiceControl.demand.refine { url ->
@@ -62,6 +62,6 @@ class RestControllerTests extends ControllerUnitTestCase {
         controller.metaClass.getParams = { -> params }
         controller.paramGenerate()
         
-        assertEquals "${newGrurl}", mockResponse.contentAsString
+        assertEquals "http://grurl.com/WORD", mockResponse.contentAsString
     }
 }
