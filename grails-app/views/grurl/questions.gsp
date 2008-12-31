@@ -5,7 +5,7 @@
     <title>GRUrl - Questions</title>
 </head>
 <body>
-    <h1>Questions And Answers</h1>
+    <h2>Questions And Answers</h2>
 
     <div class="fancyBox">
         <div class="question">

@@ -5,7 +5,7 @@
     <title>GRUrl - Contact Us</title>
 </head>
 <body>
-    <h1>Contact Information</h1>
+    <h2>Contact Information</h2>
 
     All inquiries about the system may be sent to info@grurl.net.
 
