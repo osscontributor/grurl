@@ -10,12 +10,11 @@ class GrurlService {
         realUrl
     }
     
-    def resolve(url) {
+    def resolve(url) throws GrurlException {
         def urlInstance = GRUrl.findByRealUrl(url)
         if (!urlInstance) {
             urlInstance = new GRUrl(realUrl: url)
             if (!urlInstance.save()) {
-                println 'throwing!'
                 throw new GrurlException("An error occurred processing URL: ${url}")
             }
         }

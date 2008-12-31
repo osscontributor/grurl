@@ -26,8 +26,7 @@ class GrurlController {
         def realUrl = grurlService.refine(params.realUrl)        
         try {
             flash.urlInstance = grurlService.resolve(realUrl)
-        } catch (Throwable ex) {
-            println ex.message
+        } catch (GrurlException ex) {
             flash.message = ex.message
         }
         redirect action: index
