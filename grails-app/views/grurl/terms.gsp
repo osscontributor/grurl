@@ -5,7 +5,7 @@
     <title>GRUrl - Terms And Conditions</title>
 </head>
 <body>
-    <h2>GRUrls Terms And Conditions Of Use</h2>
+    <h2>GRUrl - Terms And Conditions Of Use</h2>
 
     <div class="fancyBox">
         <h3>Prohibited Uses</h3>
