@@ -10,7 +10,7 @@ class UrlMappings {
         "/questions"(controller: 'grurl', action: 'questions')
         "/developers"(controller: 'grurl', action: 'developers')
         "500"(view:'/error')
-        "/generate/$rawUrl" {
+        "/generate" {
             controller = 'rest'
             action = [POST:'xmlGenerate', GET:'paramGenerate']
         }
