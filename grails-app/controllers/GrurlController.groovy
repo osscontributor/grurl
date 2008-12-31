@@ -3,8 +3,6 @@ class GrurlController {
     def grurlService 
     static allowedMethods = [generate:'POST']
     
-    def urlValidator
-    
     def index = {
         [urlInstance: flash.urlInstance]
     }
