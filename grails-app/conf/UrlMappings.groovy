@@ -7,10 +7,10 @@ class UrlMappings {
             }
         }
         "/"(controller: 'grurl', action: 'index')
-        "/questions"(view: '/grurl/questions')
-        "/developers"(view: '/grurl/developers')
-        "/terms"(view: '/grurl/terms')
-        "/contact"(view: '/grurl/contact')
+        "/questions"(view: '/questions')
+        "/developers"(view: '/developers')
+        "/terms"(view: '/terms')
+        "/contact"(view: '/contact')
         
         "500"(view:'/error')
         "/generate" {
