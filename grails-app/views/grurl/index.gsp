@@ -13,6 +13,7 @@
     </g:if>
 
     <g:if test="${urlInstance?.id}">
+        <g:render template='copyToClipboard' var='textToCopy' bean="${urlInstance.realUrl}"/>
         <div class="fancyBox">
         	<g:link action="redirectRequest" 
                  controller="grurl" 
