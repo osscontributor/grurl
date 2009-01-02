@@ -1,6 +1,7 @@
 class GrurlService {
     
     def urlValidator
+    def urlPattern = ~/https?:\/\/([-\w\.]+)+(:\d+)?(\/([\(\-\)\%\,\w\/_\.]*(\?\S+)?)?)?/
     
     def refine(url) {
         def realUrl = url
@@ -19,6 +20,11 @@ class GrurlService {
             }
         }
         urlInstance
+    }
+    
+    def findUrls(haystack) {
+        def matcher = haystack =~ urlPattern
+        matcher.collect { it[0] }
     }
     
 }
