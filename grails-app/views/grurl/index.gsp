@@ -13,16 +13,20 @@
     </g:if>
 
     <g:if test="${urlInstance?.id}">
-        <g:render template='copyToClipboard' var='textToCopy' bean="${urlInstance.realUrl}"/>
+
+        <g:set var='grurlUrl' value="${createLink(action: 'redirectRequest', 
+                   controller: 'grurl', 
+                   params: [urlHash: urlInstance.id.encodeAsGrurl()], 
+                   absolute: true)}"/>
+        
+        <g:render template='copyToClipboard' var='textToCopy' bean="${grurlUrl}"/>
+        
         <div class="fancyBox">
         	<g:link action="redirectRequest" 
                  controller="grurl" 
                  params="[urlHash: urlInstance.id.encodeAsGrurl()]" 
                  absolute="true">
-              ${createLink(action: 'redirectRequest', 
-                           controller: 'grurl', 
-                           params: [urlHash: urlInstance.id.encodeAsGrurl()], 
-                           absolute: true)}
+            ${grurlUrl}
             </g:link> is now a GRUrl which may be used as an alias for ${urlInstance.realUrl}.
 		</div>
     </g:if>
