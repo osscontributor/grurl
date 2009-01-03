@@ -17,5 +17,9 @@ class UrlMappings {
             controller = 'rest'
             action = [POST:'xmlGenerate', GET:'paramGenerate']
         }
+        "/grurlifyString" {
+            controller = 'rest'
+            action = [GET:'grurlifyString']
+        }
     }
 }

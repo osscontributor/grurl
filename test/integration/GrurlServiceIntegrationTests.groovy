@@ -1,4 +1,4 @@
-class GrurlServiceTests extends GroovyTestCase {
+class GrurlServiceIntegrationTests extends GroovyTestCase {
     
     def grurlService
     

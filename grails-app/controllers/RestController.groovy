@@ -33,4 +33,8 @@ class RestController {
         }
         return render(result.realUrl)
     }
+    
+    def grurlifyString = {
+        render grurlService.replaceUrls(params.inputString)
+    }
 }
