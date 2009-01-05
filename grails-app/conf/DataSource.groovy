@@ -25,8 +25,8 @@ environments {
 	}
 	production {
 		dataSource {
-			dbCreate = "update"
-			url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+            dbCreate = "update"
+            jndiName = "java:comp/env/grurlDS"
 		}
 	}
 }
