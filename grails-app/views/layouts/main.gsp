@@ -13,6 +13,15 @@
     <div class="body">
         <g:render template="/templates/navigation"/>
 		<div class="pageBody">
+		    <p>
+		        WARNING: GRUrl is currently in beta.  Data collected in GRUrl at this point may not be
+		        migrated to the first production site.  It is recommended that you NOT refer to any
+		        GRUrls in a tweet, email or anything else that may be long lived.  You have been warned.
+		        <br/>
+		        <br/>
+		        <br/>
+		        <br/>
+		    </p>
         	<g:layoutBody/>
 		</div>
     </div>
