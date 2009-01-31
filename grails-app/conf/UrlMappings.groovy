@@ -11,6 +11,7 @@ class UrlMappings {
         "/developers"(view: '/developers')
         "/terms"(view: '/terms')
         "/contact"(view: '/contact')
+        "/generateGrurl"(action: 'generate', controller: 'grurl')
         
         "500"(view:'/error')
         "/generate" {
