@@ -9,16 +9,16 @@
     <p>Would you like to know how you can request GRUrl to process URLs for you from your application?  Read on...</p>
     <div class="fancyBox">
         <h3>GET Request</h3>
-        <p>All you need to do is pass one parameter along with your GET request to <span class='code'>http://grurl.net/generate</span>...</p>
+        <p>All you need to do is pass one parameter along with your GET request to <span class='code'>http://grurl.net/rest/generate</span>...</p>
         <div class='code'>
-            http://grurl.net/generate?rawUrl=example.com/2008/12/31/its-new-years-eve
+            http://grurl.net/rest/generate?rawUrl=example.com/2008/12/31/its-new-years-eve
         </div>
         The response text will be the GRUrl-ified URL.
     </div>
 
     <div class="fancyBox">
         <h3>POST Request via XML</h3>
-        <p>Just hit <span class='code'>http://grurl.net/generate</span> with an XML request that looks like this:
+        <p>Just hit <span class='code'>http://grurl.net/rest/generate</span> with an XML request that looks like this:
         <div class='code'>
             <pre>&lt;rawUrl&gt;example.com/2008/12/31/its-new-years-eve&lt;/rawUrl&gt;</pre>
         </div>
@@ -30,8 +30,8 @@
     
     <div class="fancyBox">
         <h3>GET Request to replace all URLs in a string</h3>
-        <p>Pass one parameter along with your GET request to <span class='code'>http://grurl.net/grurlifyString</span>...</p>
-        <div class='code'>http://grurl.net/grurlifyString?inputString=This+string+has+urls+here+is+one%3A+http%3A%2F%2Fwww.google.com+and+here+is+another%3A+http%3A%2F%2Fwww.example.com+and+there+they+are.
+        <p>Pass one parameter along with your GET request to <span class='code'>http://grurl.net/rest/grurlifyString</span>...</p>
+        <div class='code'>http://grurl.net/rest/grurlifyString?inputString=This+string+has+urls+here+is+one%3A+http%3A%2F%2Fwww.google.com+and+here+is+another%3A+http%3A%2F%2Fwww.example.com+and+there+they+are.
         </div>
         <p>Expect a response text that looks like this:</p>
         <div class='code'>

@@ -14,11 +14,11 @@ class UrlMappings {
         "/generateGrurl"(action: 'generate', controller: 'grurl')
         
         "500"(view:'/error')
-        "/generate" {
+        "/rest/generate" {
             controller = 'rest'
             action = [POST:'xmlGenerate', GET:'paramGenerate']
         }
-        "/grurlifyString" {
+        "/rest/grurlifyString" {
             controller = 'rest'
             action = [GET:'grurlifyString']
         }
