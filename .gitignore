@@ -1,3 +1,4 @@
+web-app/plugins
 grurl-*.war
 test/reports/
 stacktrace.log
