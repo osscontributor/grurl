@@ -7,7 +7,7 @@
 <body>
 	<h3>GRUrl - Your Source For Groovy URLs</h3>
 	GRUrl will turn any ordinary URL into a Groovy URL (GRUrl).  A GRUrl is a shorter URL which may
-	be used as an alias for a potentially longer URL.  See the <a href="${createLinkTo(dir: 'questions')}">questions</a> page for more information.
+	be used as an alias for a potentially longer URL.  See the <a href="${createLinkTo(dir: '/app/questions')}">questions</a> page for more information.
     <g:if test="${flash.message}">
         <div class="errors">${flash.message}</div>
     </g:if>
