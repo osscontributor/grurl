@@ -36,6 +36,14 @@ environments {
     production {
         grails.serverURL = "http://grurl.net"
     }
+    // It's lame having to do this.  Application might be running on a different port.
+    development {
+        grails.serverURL = "http://localhost:8080/${appName}"
+    }
+    test {
+        grails.serverURL = "http://localhost:8080/${appName}"
+    }
+    
 }
 
 // log4j configuration

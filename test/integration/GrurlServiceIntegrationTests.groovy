@@ -12,6 +12,20 @@ class GrurlServiceIntegrationTests extends GroovyTestCase {
         assertEquals 'http://groovy.codehaus.org', result
     }
     
+    void testCorrectUrl() {
+        def result = grurlService.resolve('http://groovy.codehaus.org?somemoderatelylongquery="foobarbaz"')
+        println "result is :${result}"
+        if (grails.util.GrailsUtil.environment == "development" || grails.util.GrailsUtil.environment == "test") {
+            assertTrue "Server name and app name should be correct in Absolute URLs", 
+                result.grurlUrl.startsWith('http://localhost:8080/grurl')
+        }
+        else {
+            assertTrue "Server name and app name should be correct in Absolute URLs", 
+                result.grurlUrl.startsWith('http://grurl.net')
+        }
+
+    }
+    
     void testFindUrls_OneFullUrl() {
         def s = 'this is a test to find one url http://www.google.com and that was it'
         def urls = grurlService.findUrls(s)
